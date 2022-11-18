@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+.header-container{
+    display:flex;
+    justify-content: center;
+    font-size: 50px;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    color: white;
+    text-shadow: 5px 5px 10px;
+}
+.app{
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.time-select, .player-container, .sound-picker{
+    height: 80%;
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.player-container{
+    position:relative;
+}
+.player-container svg{
+    position:absolute;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+.time-display{
+    position:absolute;
+    bottom:10%;
+    color: white;
+    font-size: 50px;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+}
+.time-select button{
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 35px;
+    color: white;
+    width: 30%;
+    height: 10%;
+    background: none;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+.time-select button:hover{
+    color:black;
+    background-color: white;
+}
+video{
+    position: fixed;
+    top:0%;
+    left:0%;
+    width: 100%;
+    z-index: -10;
+}
+.sound-picker button:nth-child(1){
+    background: #748DA6;
+}
+.sound-picker button:nth-child(2){
+    background: #79DAE8;
+}
+.sound-picker button:nth-child(3){
+    background: #97C4B8;
+}
+.sound-picker button{
+    border: none;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    padding: 30px;
+}
+.sound-picker button img{
+    height: 100%;
+}
+@media all and (max-width:1700px){
+    .time-select button{
+        font-size: 20px;
+        width: 40%;
+    }
+    .sound-picker button{
+        height: 90px;
+        width: 90px;
+        padding: 20px;
+    }   
+    }
+    @media all and (max-width:1400px){
+        video{
+            height: 100vh;
+        } 
+        body{
+            background-color: #497880;
+        }
+        .time-select, .player-container, .sound-picker{
+            height: 60%;
+        }
+        .track-outline, .moving-outline{
+            width: 80%;
+        } 
+        .time-display{
+            position:absolute;
+            bottom:15%;
+        }
+        .sound-picker{
+            justify-content:first baseline;
+            height: 50%;
+        }
+    }
+    @media all and (max-width:900px){
+        video{
+            min-height: 100vh;
+
+        } 
+       h1{
+font-size: 50px;
+       }
+        .track-outline, .moving-outline{
+            width: 80%;
+        }
+        .play{
+            width: 40px;
+        }
+        .time-select button{
+            font-size: 20px;
+            width: 110px;
+            height: 60px;
+        }
+        .time-display{
+            position:absolute;
+            bottom: 5%;
+            
+        }
+        
+        }
+        @media all and (max-width:800px){
+            .time-display{
+                position:absolute;
+                bottom:15%;
+            }
+        }
+        @media all and (max-width:700px){
+            .time-display{
+                position:absolute;
+                bottom:0%;
+            }
+        }
+        @media all and (max-width:500px){
+            
+            .app{
+                flex-direction: column;
+            } 
+            .time-select, .sound-picker{
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+            .time-select button{
+                font-size: 20px;
+                width: 30%;
+                height: 30%;
+            }
+            .play{
+                width: 30%;
+            }
+            .track-outline, .moving-outline{
+                width: 100%;
+            }
+            .time-display{
+                position:absolute;
+                bottom:15%;
+                font-size: 30px;
+            }
+            h1{
+                font-size: 40px;
+            }
+            
+            
+            }
